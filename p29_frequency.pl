@@ -61,7 +61,7 @@ main :-
     print("Ejecutando programa 29..."),nl,
     print("Ejecutando: length_frequency([[a,b,c],[d,e],[f,g,h],[d,e],[i,j,k,l],[m,n],[o]], L)."),nl,
     length_frequency([[a,b,c],[d,e],[f,g,h],[d,e],[i,j,k,l],[m,n],[o]], L),
-    format("Resultado: ~s~n", [L]).
+    format("Resultado: ~w~n", [L]).
 
 % Ejemplo de uso:
 % ?- length_frequency([[a,b,c],[d,e],[f,g,h],[d,e],[i,j,k,l],[m,n],[o]], L).

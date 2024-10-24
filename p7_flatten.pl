@@ -36,7 +36,7 @@ main :-
     print("Ejecutando programa 7..."),nl,
     print("Ejecutando: my_flatten([a, b, c, [d, e, f, [g, h]], i, [j, k]], F)."),nl,
     my_flatten([a, b, c, [d, e, f, [g, h]], i, [j, k]], F),
-    format("Resultado: ~s~n", [F]).
+    format("Resultado: ~w~n", [F]).
 
 % Ejemplo de uso:
 % ?- my_flatten([a, b, c, [d, e, f, [g, h]], i, [j, k]], F).

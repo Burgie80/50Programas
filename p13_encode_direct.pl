@@ -41,7 +41,7 @@ main :-
     print("Ejecutando programa 13..."),nl,
     print("Ejecutando: encode_direct([a,a,a,a,b,c,c,a,a,d,e,e,e,e], R)."),nl,
     encode_direct([a,a,a,a,b,c,c,a,a,d,e,e,e,e], R),
-    format("Resultado: ~s~n", [R]).
+    format("Resultado: ~w~n", [R]).
 
 % Ejemplo de uso:
 % ?- encode_direct([a,a,a,a,b,c,c,a,a,d,e,e,e,e], R).

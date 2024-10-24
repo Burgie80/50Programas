@@ -42,7 +42,7 @@ main :-
     print("Ejecutando programa 24..."),nl,
     print("Ejecutando: lotto(6, 49, L)."),nl,
     lotto(6, 49, L),
-    format("Resultado: ~s~n", [L]).
+    format("Resultado: ~w~n", [L]).
 
 % Ejemplo de uso:
 % ?- lotto(6, 49, L).

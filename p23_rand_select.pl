@@ -43,7 +43,7 @@ main :-
     print("Ejecutando programa 23..."),nl,
     print("Ejecutando: rnd_select([a,b,c,d,e,f,g,h], 3, L)."),nl,
     rnd_select([a,b,c,d,e,f,g,h], 3, L),
-    format("Resultado: ~s~n", [L]).
+    format("Resultado: ~w~n", [L]).
 
 % Ejemplo de uso:
 % ?- rnd_select([a,b,c,d,e,f,g,h], 3, L).

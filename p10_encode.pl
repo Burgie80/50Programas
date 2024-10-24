@@ -54,7 +54,7 @@ main :-
     print("Ejecutando programa 10..."),nl,
     print("Ejecutando: encode([a, b, c, c, d, d, d, e, a], E)."),nl,
     encode([a, b, c, c, d, d, d, e, a], E),
-    format("Resultado: ~s~n", [E]).
+    format("Resultado: ~w~n", [E]).
 
 % Ejemplo de uso:
 % ?- encode([a, b, c, c, d, d, d, e, a], E).

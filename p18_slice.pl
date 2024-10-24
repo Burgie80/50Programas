@@ -26,7 +26,7 @@ slice([_|T], I, K, R) :- I > 1, I1 is I - 1, K1 is K - 1, slice(T, I1, K1, R).
 main :-
     print("Ejecutando programa 18..."),nl,
     print("Ejecutando: slice([a,b,c,d,e,f,g,h,i,k], 3, 7, R)."),nl,
-    slice([a,b,c,d,e,f,g,h,i,k], 3, 7, R)
+    slice([a,b,c,d,e,f,g,h,i,k], 3, 7, R),
     format("Resultado: ~s~n", [R]).
 
 % Ejemplo de uso:

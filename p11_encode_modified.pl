@@ -88,7 +88,7 @@ main :-
     print("Ejecutando programa 11..."),nl,
     print("Ejecutando: encode_modified([a,a,a,a,b,c,c,a,a,d,e,e,e,e], R)."),nl,
     encode_modified([a,a,a,a,b,c,c,a,a,d,e,e,e,e], R),
-    format("Resultado: ~s~n", [R]).
+    format("Resultado: ~w~n", [R]).
 
 % Ejemplo de uso:
 % ?- encode_modified([a,a,a,a,b,c,c,a,a,d,e,e,e,e], R).

@@ -52,7 +52,7 @@ main :-
     print("Ejecutando programa 9..."),nl,
     print("Ejecutando: pack([a, b, c, c, d, d, d, e, a], G)."),nl,
     pack([a, b, c, c, d, d, d, e, a], G),
-    format("Resultado: ~s~n", [F]).
+    format("Resultado: ~w~n", [G]).
 
 % Ejemplo de uso:
 % ?- pack([a, b, c, c, d, d, d, e, a], G).

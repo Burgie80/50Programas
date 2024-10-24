@@ -23,7 +23,7 @@ main :-
     print("Ejecutando programa 28..."),nl,
     print("Ejecutando: lsort([[a,b,c],[d,e],[f,g,h],[d,e],[i,j,k,l],[m,n],[o]], L)."),nl,
     lsort([[a,b,c],[d,e],[f,g,h],[d,e],[i,j,k,l],[m,n],[o]], L),
-    format("Resultado: ~s~n", [L]).
+    format("Resultado: ~w~n", [L]).
 
 % Ejemplo de uso:
 % ?- lsort([[a,b,c],[d,e],[f,g,h],[d,e],[i,j,k,l],[m,n],[o]], L).

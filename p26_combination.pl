@@ -30,10 +30,11 @@ combination(K, [_|T], Comb) :- K > 0, combination(K, T, Comb).
 
 % Función main para ejecutar el programa con ejemplos de uso
 main :-
-    print("Ejecutando programa 26..."),nl,
-    print("Ejecutando: combination(2, [a,b,c,d], L)."),nl,
-    combination(2, [a,b,c,d], L),
-    format("Resultado: ~s~n", [L]).
+    print("Ejecutando programa 26..."), nl,
+    print("Ejecutando: combination(2, [a,b,c,d], L)."), nl,
+    % Encontrar y mostrar todas las combinaciones
+    findall(L, combination(2, [a,b,c,d], L), Combinations),
+    format("Resultado: ~w~n", [Combinations]).
 
 % Ejemplo de uso:
 % ?- combination(2, [a,b,c,d], L).

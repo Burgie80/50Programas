@@ -31,7 +31,7 @@ main :-
         print("Ejecutando programa 4..."),nl,
         print("Ejecutando: list_length([a, b, c, d], N)."),nl,
         list_length([a, b, c, d], N),     
-        format("Resultado: ~s~n\n", [N]).
+        format("Resultado: ~d~n\n", [N]).
 
 % Ejemplo de uso:
 % ?- list_length([a, b, c, d], N).

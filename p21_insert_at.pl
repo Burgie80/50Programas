@@ -27,7 +27,7 @@ main :-
     print("Ejecutando programa 21..."),nl,
     print("Ejecutando: insert_at(alfa, [a,b,c,d], 2, L)."),nl,
     insert_at(alfa, [a,b,c,d], 2, L),
-    format("Resultado: ~s~n", [L]).
+    format("Resultado: ~w~n", [L]).
 
 % Ejemplo de uso:
 % ?- insert_at(alfa, [a,b,c,d], 2, L).

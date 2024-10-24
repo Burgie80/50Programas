@@ -41,11 +41,11 @@ main :-
     print("Ejecutando programa 30..."),nl,
 
     print("Ejecutando: is_prime(17)."),nl,
-    (is_prime(17)) -> Resultado1 = "true"; Resultado1 = "false"),
+    (is_prime(17) -> Resultado1 = "true"; Resultado1 = "false"),
     format("Resultado: ~s~n", [Resultado1]),
 
     print("Ejecutando: is_prime(24)."),nl,
-    (is_prime(24)) -> Resultado2 = "true"; Resultado2 = "false"),
+    (is_prime(24) -> Resultado2 = "true"; Resultado2 = "false"),
     format("Resultado: ~s~n", [Resultado2]).
 
 % Ejemplo de uso:

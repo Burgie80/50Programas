@@ -48,12 +48,17 @@ combination(K, [_|T], Comb) :- K > 0, combination(K, T, Comb).
 group([], [], []).
 group([N|Ns], Es, [G|Gs]) :- combination(N, Es, G), subtract(Es, G, Rest), group(Ns, Rest, Gs).
 
+print_groups([]).
+print_groups([G|Gs]) :-
+	format("~w~n", [G]),
+	print_groups(Gs).
+
 % Función main para ejecutar el programa con ejemplos de uso
 main :-
     print("Ejecutando programa 27..."),nl,
     print("Ejecutando: group([2,2,5], [a,b,c,d,e,f,g,h,i], G)."),nl,
-    group([2,2,5], [a,b,c,d,e,f,g,h,i], G),
-    format("Resultado: ~s~n", [G]).
+    findall(G, group([2,2,5], [a,b,c,d,e,f,g,h,i], G), Groups),
+    print_groups(Groups).
 
 % Ejemplo de uso:
 % ?- group([2,2,5], [a,b,c,d,e,f,g,h,i], G).

@@ -28,7 +28,7 @@ main :-
     print("Ejecutando programa 22..."),nl,
     print("Ejecutando: range(4, 9, L)."),nl,
     range(4, 9, L),
-    format("Resultado: ~s~n", [L]).
+    format("Resultado: ~w~n", [L]).
 
 % Ejemplo de uso:
 % ?- range(4, 9, L).
