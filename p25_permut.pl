@@ -48,6 +48,13 @@ element_at(X, [_|T], I) :- I > 1, I1 is I - 1, element_at(X, T, I1).
 % Utiliza la selección aleatoria para construir la permutación.
 rnd_permu(L, P) :- length(L, Len), rnd_select(L, Len, P).
 
+% Función main para ejecutar el programa con ejemplos de uso
+main :-
+    print("Ejecutando programa 25..."),nl,
+    print("Ejecutando: rnd_permu([a,b,c,d,e,f], L)."),nl,
+    rnd_permu([a,b,c,d,e,f], L),
+    format("Resultado: ~s~n", [L]).
+
 % Ejemplo de uso:
 % ?- rnd_permu([a,b,c,d,e,f], L).
 % L = [b,a,d,c,f,e]  % (el resultado puede variar debido a la aleatoriedad)

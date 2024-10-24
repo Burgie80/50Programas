@@ -83,6 +83,13 @@ modify([[1,X]|T], [X|R]) :- modify(T, R).
 % Si hay más de un elemento, mantén el formato (N, X).
 modify([[N,X]|T], [[N,X]|R]) :- N > 1, modify(T, R).
 
+% Función main para ejecutar el programa con ejemplos de uso
+main :-
+    print("Ejecutando programa 11..."),nl,
+    print("Ejecutando: encode_modified([a,a,a,a,b,c,c,a,a,d,e,e,e,e], R)."),nl,
+    encode_modified([a,a,a,a,b,c,c,a,a,d,e,e,e,e], R),
+    format("Resultado: ~s~n", [R]).
+
 % Ejemplo de uso:
 % ?- encode_modified([a,a,a,a,b,c,c,a,a,d,e,e,e,e], R).
 % R = [[4,a],b,[2,c],[2,a],d,[4,e]]

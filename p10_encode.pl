@@ -49,6 +49,13 @@ encode(L, R) :- pack(L, P), transform(P, R).
 transform([], []).
 transform([[X|Xs]|Ys], [[N,X]|Zs]) :- length([X|Xs], N), transform(Ys, Zs).
 
+% Función main para ejecutar el programa con ejemplos de uso
+main :-
+    print("Ejecutando programa 10..."),nl,
+    print("Ejecutando: encode([a, b, c, c, d, d, d, e, a], E)."),nl,
+    encode([a, b, c, c, d, d, d, e, a], E),
+    format("Resultado: ~s~n", [E]).
+
 % Ejemplo de uso:
 % ?- encode([a, b, c, c, d, d, d, e, a], E).
 % E = [[a, 1], [b, 1], [c, 2], [d, 3], [e, 1], [a, 1]].

@@ -39,6 +39,12 @@ rnd_select(L, N, [X|R]) :-
 element_at(X, [X|_], 1).
 element_at(X, [_|T], I) :- I > 1, I1 is I - 1, element_at(X, T, I1).
 
+main :-
+    print("Ejecutando programa 23..."),nl,
+    print("Ejecutando: rnd_select([a,b,c,d,e,f,g,h], 3, L)."),nl,
+    rnd_select([a,b,c,d,e,f,g,h], 3, L),
+    format("Resultado: ~s~n", [L]).
+
 % Ejemplo de uso:
 % ?- rnd_select([a,b,c,d,e,f,g,h], 3, L).
 % L = [e,b,g]  % (el resultado puede variar debido a la aleatoriedad)

@@ -37,6 +37,13 @@ compress([X,X|T], R) :- compress([X|T], R).
 % Si el primer y segundo elemento son distintos, conserva el primero.
 compress([X,Y|T], [X|R]) :- X \= Y, compress([Y|T], R).
 
+% Función main para ejecutar el programa con ejemplos de uso
+main :-
+    print("Ejecutando programa 8..."),nl,
+    print("Ejecutando: compress([a, b, c, c, d, d, d, e, a], C)."),nl,
+    compress([a, b, c, c, d, d, d, e, a], C),
+    format("Resultado: ~s~n", [C]).
+
 % Ejemplo de uso:
 % ?- compress([a, b, c, c, d, d, d, e, a], C).
 % C = [a, b, c, d, e, a].

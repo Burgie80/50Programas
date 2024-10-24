@@ -31,6 +31,13 @@ my_flatten([H|T], Flat) :- my_flatten(H, FH), my_flatten(T, FT), append(FH, FT, 
 % Si la cabeza no es una lista, simplemente agrégala al resultado.
 my_flatten(X, [X]) :- X \= [], \+ is_list(X).
 
+% Función main para ejecutar el programa con ejemplos de uso
+main :-
+    print("Ejecutando programa 7..."),nl,
+    print("Ejecutando: my_flatten([a, b, c, [d, e, f, [g, h]], i, [j, k]], F)."),nl,
+    my_flatten([a, b, c, [d, e, f, [g, h]], i, [j, k]], F),
+    format("Resultado: ~s~n", [F]).
+
 % Ejemplo de uso:
 % ?- my_flatten([a, b, c, [d, e, f, [g, h]], i, [j, k]], F).
 % F = [a, b, c, d, e, f, g, h, i, j, k]

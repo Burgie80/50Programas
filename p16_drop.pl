@@ -28,6 +28,13 @@ drop([_|T], 1, N, R) :- drop(T, N, N, R).
 % Caso recursivo: disminuye el contador y conserva el elemento.
 drop([H|T], K, N, [H|R]) :- K > 1, K1 is K - 1, drop(T, K1, N, R).
 
+% Función main para ejecutar el programa con ejemplos de uso
+main :-
+    print("Ejecutando programa 16..."),nl,
+    print("Ejecutando: drop([a,b,c,d,e,f,g,h,i,k], 3, R)."),nl,
+    drop([a,b,c,d,e,f,g,h,i,k], 3, R),
+    format("Resultado: ~s~n", [R]).
+
 % Ejemplo de uso:
 % ?- drop([a,b,c,d,e,f,g,h,i,k], 3, R).
 % R = [a,b,d,e,g,h,k]

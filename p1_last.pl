@@ -30,6 +30,7 @@ my_last(X, [X]).
 my_last(X, [_|Tail]) :-
 	my_last(X, Tail).
 
+% Función main para ejecutar el programa con ejemplos de uso
 main :-
 	print("Ejecutando programa 1..."),nl,
 	print("Ejecutando: my_last(X, [a, b, c, d])."),nl,

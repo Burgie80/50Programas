@@ -20,6 +20,12 @@
 remove_at(X, [X|T], 1, T).
 remove_at(X, [H|T], K, [H|R]) :- K > 1, K1 is K - 1, remove_at(X, T, K1, R).
 
+main :-
+    print("Ejecutando programa 20..."),nl,
+    print("Ejecutando: remove_at(X, [a,b,c,d], 2, R)."),nl,
+    remove_at(X, [a,b,c,d], 2, R),
+    format("Resultado: ~s~n", [R]).
+
 % Ejemplo de uso:
 % ?- remove_at(X, [a,b,c,d], 2, R).
 % X = b

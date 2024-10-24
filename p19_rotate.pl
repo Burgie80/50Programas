@@ -25,6 +25,13 @@ rotate(L, N, R) :- length(L, Len), N1 is N mod Len, split(L, N1, L1, L2), append
 split(L, 0, [], L).
 split([H|T], N, [H|L1], L2) :- N > 0, N1 is N - 1, split(T, N1, L1, L2).
 
+% Función main para ejecutar el programa con ejemplos de uso
+main :-
+    print("Ejecutando programa 19..."),nl,
+    print("Ejecutando: rotate([a,b,c,d,e,f,g,h], 3, R)."),nl,
+    rotate([a,b,c,d,e,f,g,h], 3, R),
+    format("Resultado: ~s~n", [R]).
+
 % Ejemplo de uso:
 % ?- rotate([a,b,c,d,e,f,g,h], 3, R).
 % R = [d,e,f,g,h,a,b,c]

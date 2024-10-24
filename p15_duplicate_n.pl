@@ -26,6 +26,13 @@ dupli([H|T], N, R) :- duplicate(H, N, D), dupli(T, N, R1), append(D, R1, R).
 duplicate(_, 0, []).
 duplicate(X, N, [X|R]) :- N > 0, N1 is N - 1, duplicate(X, N1, R).
 
+% Función main para ejecutar el programa con ejemplos de uso
+main :-
+    print("Ejecutando programa 15..."),nl,
+    print("Ejecutando: dupli([a,b,c], 3, R)."),nl,
+    dupli([a,b,c], 3, R),
+    format("Resultado: ~s~n", [R]).
+
 % Ejemplo de uso:
 % ?- dupli([a,b,c], 3, R).
 % R = [a,a,a,b,b,b,c,c,c]

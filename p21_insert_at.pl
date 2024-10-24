@@ -22,6 +22,13 @@
 insert_at(X, L, 1, [X|L]).
 insert_at(X, [H|T], K, [H|R]) :- K > 1, K1 is K - 1, insert_at(X, T, K1, R).
 
+% Función main para ejecutar el programa con ejemplos de uso
+main :-
+    print("Ejecutando programa 21..."),nl,
+    print("Ejecutando: insert_at(alfa, [a,b,c,d], 2, L)."),nl,
+    insert_at(alfa, [a,b,c,d], 2, L),
+    format("Resultado: ~s~n", [L]).
+
 % Ejemplo de uso:
 % ?- insert_at(alfa, [a,b,c,d], 2, L).
 % L = [a,alfa,b,c,d]

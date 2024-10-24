@@ -18,8 +18,12 @@
 % Ordena una lista de listas de acuerdo con la longitud de las sublistas.
 lsort(L, S) :- map_list_to_pairs(length, L, P), keysort(P, SP), pairs_values(SP, S).
 
-% Funciones auxiliares (asumiendo que están predefinidas en Prolog o importadas)
-% map_list_to_pairs/3, keysort/2, pairs_values/2
+% Función main para ejecutar el programa con ejemplos de uso
+main :-
+    print("Ejecutando programa 28..."),nl,
+    print("Ejecutando: lsort([[a,b,c],[d,e],[f,g,h],[d,e],[i,j,k,l],[m,n],[o]], L)."),nl,
+    lsort([[a,b,c],[d,e],[f,g,h],[d,e],[i,j,k,l],[m,n],[o]], L),
+    format("Resultado: ~s~n", [L]).
 
 % Ejemplo de uso:
 % ?- lsort([[a,b,c],[d,e],[f,g,h],[d,e],[i,j,k,l],[m,n],[o]], L).

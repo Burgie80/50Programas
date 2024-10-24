@@ -30,6 +30,7 @@ penultimate(X, [X, _]).
 penultimate(X, [_|T]) :-
 	penultimate(X, T).
 
+% Función main para ejecutar el programa con ejemplos de uso
 main :-
         print("Ejecutando programa 2..."),nl,
         print("Ejecutando: penultimate(X, [a, b, c, d])."),nl,

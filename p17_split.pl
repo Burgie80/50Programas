@@ -21,6 +21,14 @@
 split(L, 0, [], L).
 split([H|T], N, [H|L1], L2) :- N > 0, N1 is N - 1, split(T, N1, L1, L2).
 
+% Función main para ejecutar el programa con ejemplos de uso
+main :-
+    print("Ejecutando programa 17..."),nl,
+    print("Ejecutando: split([a,b,c,d,e,f,g,h,i,k], 3, L1, L2)."),nl,
+    split([a,b,c,d,e,f,g,h,i,k], 3, L1, L2),
+    format("Primera mitad: ~s~n", [L1]),
+    format("Segunda mitad: ~s~n", [L2]).
+
 % Ejemplo de uso:
 % ?- split([a,b,c,d,e,f,g,h,i,k], 3, L1, L2).
 % L1 = [a,b,c]

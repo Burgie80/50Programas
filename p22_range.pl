@@ -23,6 +23,13 @@ range(I, I, [I]).
 % Caso recursivo: agrega el inicio a la lista y continúa con el siguiente número.
 range(I, K, [I|R]) :- I < K, I1 is I + 1, range(I1, K, R).
 
+% Función main para ejecutar el programa con ejemplos de uso
+main :-
+    print("Ejecutando programa 22..."),nl,
+    print("Ejecutando: range(4, 9, L)."),nl,
+    range(4, 9, L),
+    format("Resultado: ~s~n", [L]).
+
 % Ejemplo de uso:
 % ?- range(4, 9, L).
 % L = [4, 5, 6, 7, 8, 9]

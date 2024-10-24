@@ -47,6 +47,13 @@ transfer(X, [Y|Ys], [Y|Ys], [X]) :- X \= Y.
 % Si el siguiente elemento es igual, agrégalo a la sublista.
 transfer(X, [X|Xs], Ys, [X|Zs]) :- transfer(X, Xs, Ys, Zs).
 
+% Función main para ejecutar el programa con ejemplos de uso
+main :-
+    print("Ejecutando programa 9..."),nl,
+    print("Ejecutando: pack([a, b, c, c, d, d, d, e, a], G)."),nl,
+    pack([a, b, c, c, d, d, d, e, a], G),
+    format("Resultado: ~s~n", [F]).
+
 % Ejemplo de uso:
 % ?- pack([a, b, c, c, d, d, d, e, a], G).
 % G = [a, b, [c, c], [d, d], e, a].

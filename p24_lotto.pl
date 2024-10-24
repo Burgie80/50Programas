@@ -37,6 +37,13 @@ element_at(X, [_|T], I) :- I > 1, I1 is I - 1, element_at(X, T, I1).
 % Utiliza la función range para generar la lista de números y luego selecciona aleatoriamente.
 lotto(N, M, L) :- range(1, M, R), rnd_select(R, N, L).
 
+% Función main para ejecutar el programa con ejemplos de uso
+main :-
+    print("Ejecutando programa 24..."),nl,
+    print("Ejecutando: lotto(6, 49, L)."),nl,
+    lotto(6, 49, L),
+    format("Resultado: ~s~n", [L]).
+
 % Ejemplo de uso:
 % ?- lotto(6, 49, L).
 % L = [23, 1, 17, 33, 21, 37]  % (el resultado puede variar debido a la aleatoriedad)

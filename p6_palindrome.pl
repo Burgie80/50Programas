@@ -32,6 +32,7 @@ reverse_list([H|T], Acc, R) :- reverse_list(T, [H|Acc], R).
 % Una lista es un palíndromo si es igual a su inversa.
 palindrome(L) :- reverse_list(L, L).
 
+% Función main para ejecutar el programa con ejemplos de uso
 main :-
     print("Ejecutando programa 6..."), nl,
     

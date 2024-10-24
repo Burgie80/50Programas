@@ -36,6 +36,13 @@ count(_, [], 0, []).
 count(X, [X|Xs], N, Rest) :- count(X, Xs, N1, Rest), N is N1 + 1.
 count(X, [Y|Ys], 0, [Y|Ys]) :- X \= Y.
 
+% Función main para ejecutar el programa con ejemplos de uso
+main :-
+    print("Ejecutando programa 13..."),nl,
+    print("Ejecutando: encode_direct([a,a,a,a,b,c,c,a,a,d,e,e,e,e], R)."),nl,
+    encode_direct([a,a,a,a,b,c,c,a,a,d,e,e,e,e], R),
+    format("Resultado: ~s~n", [R]).
+
 % Ejemplo de uso:
 % ?- encode_direct([a,a,a,a,b,c,c,a,a,d,e,e,e,e], R).
 % R = [[4,a],[1,b],[2,c],[2,a],[1,d],[4,e]]

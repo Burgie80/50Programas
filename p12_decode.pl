@@ -30,6 +30,13 @@ decode([[N,X]|T], R) :- decode(T, R1), expand(X, N, E), append(E, R1, R).
 expand(_, 0, []).
 expand(X, N, [X|T]) :- N > 0, N1 is N - 1, expand(X, N1, T).
 
+% Función main para ejecutar el programa con ejemplos de uso
+main :-
+    print("Ejecutando programa 12..."),nl,
+    print("Ejecutando: decode([[4,a],[1,b],[2,c],[2,a],[1,d],[4,e]], R)."),nl,
+   decode([[4,a],[1,b],[2,c],[2,a],[1,d],[4,e]], R),
+    format("Resultado: ~s~n", [R]).
+
 % Ejemplo de uso:
 % ?- decode([[4,a],[1,b],[2,c],[2,a],[1,d],[4,e]], R).
 % R = [a, a, a, a, b, c, c, a, a, d, e, e, e, e]

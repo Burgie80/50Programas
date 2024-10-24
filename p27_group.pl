@@ -48,6 +48,13 @@ combination(K, [_|T], Comb) :- K > 0, combination(K, T, Comb).
 group([], [], []).
 group([N|Ns], Es, [G|Gs]) :- combination(N, Es, G), subtract(Es, G, Rest), group(Ns, Rest, Gs).
 
+% Función main para ejecutar el programa con ejemplos de uso
+main :-
+    print("Ejecutando programa 27..."),nl,
+    print("Ejecutando: group([2,2,5], [a,b,c,d,e,f,g,h,i], G)."),nl,
+    group([2,2,5], [a,b,c,d,e,f,g,h,i], G),
+    format("Resultado: ~s~n", [G]).
+
 % Ejemplo de uso:
 % ?- group([2,2,5], [a,b,c,d,e,f,g,h,i], G).
 % G = [[a,b],[c,d],[e,f,g,h,i]] ;
