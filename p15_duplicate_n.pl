@@ -3,7 +3,16 @@
 % Fecha: 20 de octubre de 2024
 % Descripción: Programa en Prolog que duplica los elementos
 % de una lista un número dado de veces.
+% Se incluye un código comentado de Python.
 % ===============================================
+
+% ---------- Código en Python (Comentado) --------------
+% def dupli(lst, n):
+%     return [x for x in lst for _ in range(n)]
+% 
+% if __name__ == '__main__':
+%     print(dupli(['a', 'b', 'c'], 3))
+% ------------------------------------------------------
 
 % ------------ Código en Prolog ------------------------
 % Duplica los elementos de una lista un número dado de veces.

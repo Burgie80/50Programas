@@ -5,6 +5,24 @@
 % de elementos seleccionados aleatoriamente de una lista.
 % ===============================================
 
+% ----------- Código en Python (Comentado) -------------
+% import random
+% 
+% def element_at(lst, i):
+%     return lst[i-1]
+% 
+% def rnd_select(lst, n):
+%     if n == 0:
+%         return []
+%     i = random.randint(1, len(lst))
+%     x = element_at(lst, i)
+%     lst.remove(x)
+%     return [x] + rnd_select(lst, n - 1)
+% 
+% if __name__ == '__main__':
+%     print(rnd_select(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'], 3))
+% ------------------------------------------------------
+
 % ------------ Código en Prolog ------------------------
 % Extrae un número dado de elementos aleatorios de una lista.
 % Utiliza un generador de números aleatorios y elimina los elementos seleccionados.

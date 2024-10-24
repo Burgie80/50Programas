@@ -3,7 +3,19 @@
 % Fecha: 20 de octubre de 2024
 % Descripción: Programa en Prolog que simula una lotería
 % extrayendo N números aleatorios de un rango.
+% Se incluye un código comentado de Python.
 % ===============================================
+
+% ----------- Código en Python (Comentado) -------------
+% import random
+% 
+% def lotto(n, m):
+%     rands = [random.randint(1, m) for _ in range(n)]
+%     return rands
+% 
+% if __name__ == '__main__':
+%     print(lotto(6, 49))
+% ------------------------------------------------------
 
 % ------------ Código en Prolog ------------------------
 % Crea una lista con todos los enteros dentro de un rango dado.
@@ -24,9 +36,6 @@ element_at(X, [_|T], I) :- I > 1, I1 is I - 1, element_at(X, T, I1).
 % Extrae N números aleatorios de un rango dado.
 % Utiliza la función range para generar la lista de números y luego selecciona aleatoriamente.
 lotto(N, M, L) :- range(1, M, R), rnd_select(R, N, L).
-
-% Funciones auxiliares (asumiendo que están definidas en el mismo archivo)
-% range/3 y rnd_select/3 (definidas en problemas anteriores)
 
 % Ejemplo de uso:
 % ?- lotto(6, 49, L).

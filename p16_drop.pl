@@ -3,7 +3,16 @@
 % Fecha: 20 de octubre de 2024
 % Descripción: Programa en Prolog que elimina cada n-ésimo
 % elemento de una lista.
+% Se incluye un código comentado de Python.
 % ===============================================
+
+% ---------- Código en Python (Comentado) --------------
+% def drop(lst, n):
+%     return [x for i, x in enumerate(lst, 1) if i % n != 0]
+% 
+% if __name__ == '__main__':
+%     print(drop(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k'], 3))
+% ------------------------------------------------------
 
 % ------------ Código en Prolog ------------------------
 % Elimina cada n-ésimo elemento de una lista.

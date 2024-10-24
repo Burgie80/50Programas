@@ -4,7 +4,22 @@
 % Descripción: Programa en Prolog que decodifica una lista
 % codificada mediante Run-Length. Expande cada par (N, X)
 % en una lista con N elementos X.
+% Se incluye un código comentado de Python.
 % ===============================================
+
+% ---------- Código en Python (Comentado) --------------
+% def decode(lst):
+%     result = []
+%     for n, x in lst:
+%         result += expand(x, n)
+%     return result
+% 
+% def expand(x, n):
+%     return [x] * n
+% 
+% if __name__ == '__main__':
+%     print(decode([[4, 'a'], [1, 'b'], [2, 'c'], [2, 'a'], [1, 'd'], [4, 'e']]))
+% ------------------------------------------------------
 
 % ------------ Código en Prolog ------------------------
 % Decodifica una lista codificada mediante Run-Length.

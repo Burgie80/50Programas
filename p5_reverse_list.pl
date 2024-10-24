@@ -24,6 +24,12 @@ reverse_list([], Acc, Acc).
 % Caso recursivo: mueve el elemento de la cabeza al acumulador.
 reverse_list([H|T], Acc, R) :- reverse_list(T, [H|Acc], R).
 
+main :-
+        print("Ejecutando programa 5..."),nl,
+        print("Ejecutando: reverse_list([a, b, c, d], R)."),nl,
+        reverse_list([a, b, c, d], R),
+        format("Resultado: ~s~n\n", [R]).
+
 % Ejemplo de uso:
 % ?- reverse_list([a, b, c, d], R).
 % R = [d, c, b, a].

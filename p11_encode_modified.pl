@@ -4,7 +4,50 @@
 % Descripción: Programa en Prolog que modifica la codificación
 % Run-Length de una lista. Si un elemento no tiene duplicados,
 % se mantiene sin empaquetar.
+% Se incluye un código comentado de Python.
 % ===============================================
+
+% ---------- Código en Python (Comentado) --------------
+% def pack(lst):
+%     if not lst:
+%         return []
+%     else:
+%         first, *rest = lst
+%         ys, rest_of_list = transfer(first, rest)
+%         return [[first] + ys] + pack(rest_of_list)
+%
+% def transfer(x, lst):
+%     if not lst:
+%         return [], []
+%     elif x != lst[0]:
+%         return [], lst
+%     else:
+%         ys, rest = transfer(x, lst[1:])
+%         return [x] + ys, rest
+%
+% def encode(lst):
+%     packed = pack(lst)
+%     return transform(packed)
+%
+% def transform(packed):
+%     return [[len(sublist), sublist[0]] for sublist in packed]
+%
+% def encode_modified(lst):
+%     encoded = encode(lst)
+%     return modify(encoded)
+%
+% def modify(encoded):
+%     result = []
+%     for n, x in encoded:
+%         if n == 1:
+%             result.append(x)
+%         else:
+%             result.append([n, x])
+%     return result
+%
+% if __name__ == '__main__':
+%     print(encode_modified(['a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e']))
+% ------------------------------------------------------
 
 % ------------ Código en Prolog ------------------------
 % Agrupa duplicados consecutivos de una lista en sublistas.

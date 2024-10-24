@@ -4,7 +4,27 @@
 % Descripción: Programa en Prolog que realiza la codificación
 % Run-Length de una lista de forma directa. Cuenta cuántos
 % elementos consecutivos son iguales.
+% Se incluye un código comentado en Python.
 % ===============================================
+
+% -------- Código en Python (Comentado) ----------------
+% def encode_direct(lst):
+%     if not lst:
+%         return []
+%     first, *rest = lst
+%     count_val, rest_of_list = count(first, rest)
+%     return [[count_val, first]] + encode_direct(rest_of_list)
+% 
+% def count(x, lst):
+%     count_val = 1
+%     while lst and lst[0] == x:
+%         lst = lst[1:]
+%         count_val += 1
+%     return count_val, lst
+% 
+% if __name__ == '__main__':
+%     print(encode_direct(['a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e']))
+% ------------------------------------------------------
 
 % ------------ Código en Prolog ------------------------
 % Codifica directamente una lista usando codificación Run-Length.

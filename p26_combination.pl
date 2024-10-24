@@ -4,7 +4,23 @@
 % Descripción: Programa en Prolog que genera combinaciones
 % de K elementos distintos seleccionados de una lista de
 % N elementos.
+% Se incluye un código comentado de Python.
 % ===============================================
+
+% ----------- Código en Python (Comentado) -------------
+% def combination(k, lst):
+%     if k == 0:
+%         return [[]]
+%     if not lst:
+%         return []
+%     with_first = combination(k - 1, lst[1:])
+%     with_first = [[lst[0]] + comb for comb in with_first]
+%     without_first = combination(k, lst[1:])
+%     return with_first + without_first
+% 
+% if __name__ == '__main__':
+%     print(combination(2, ['a', 'b', 'c', 'd']))
+% ------------------------------------------------------
 
 % ------------ Código en Prolog ------------------------
 % Genera todas las combinaciones de K elementos seleccionados de una lista dada.

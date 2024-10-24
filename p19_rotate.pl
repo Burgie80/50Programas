@@ -4,7 +4,17 @@
 % Descripción: Programa en Prolog que rota una lista N
 % lugares a la izquierda. Utiliza la longitud de la lista
 % para manejar rotaciones mayores que la longitud.
+% Se incluye un código comentado de Python.
 % ===============================================
+
+% ---------- Código en Python (Comentado) --------------
+% def rotate(lst, n):
+%     n = n % len(lst)
+%     return lst[n:] + lst[:n]
+% 
+% if __name__ == '__main__':
+%     print(rotate(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'], 3))
+% ------------------------------------------------------
 
 % ------------ Código en Prolog ------------------------
 % Rota una lista N lugares a la izquierda.

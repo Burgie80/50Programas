@@ -3,7 +3,18 @@
 % Fecha: 20 de octubre de 2024
 % Descripción: Programa en Prolog que crea una lista con
 % todos los enteros dentro de un rango dado.
+% Se incluye un código comentado de Python.
 % ===============================================
+
+% ----------- Código en Python (Comentado) -------------
+% def range_list(i, k):
+%     if i == k:
+%         return [i]
+%     return [i] + range_list(i + 1, k)
+% 
+% if __name__ == '__main__':
+%     print(range_list(4, 9))
+% ------------------------------------------------------
 
 % ------------ Código en Prolog ------------------------
 % Crea una lista con todos los enteros dentro de un rango dado.

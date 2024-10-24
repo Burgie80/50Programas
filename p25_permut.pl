@@ -3,7 +3,29 @@
 % Fecha: 20 de octubre de 2024
 % Descripción: Programa en Prolog que genera una permutación
 % aleatoria de los elementos de una lista.
+% Se incluye un código comentado de Python.
 % ===============================================
+
+% ----------- Código en Python (Comentado) -------------
+% import random
+% 
+% def element_at(lst, i):
+%     return lst[i-1]
+% 
+% def rnd_select(lst, n):
+%     if n == 0:
+%         return []
+%     i = random.randint(1, len(lst))
+%     x = element_at(lst, i)
+%     lst.remove(x)
+%     return [x] + rnd_select(lst, n - 1)
+% 
+% def rnd_permu(lst):
+%     return rnd_select(lst, len(lst))
+% 
+% if __name__ == '__main__':
+%     print(rnd_permu(['a', 'b', 'c', 'd', 'e', 'f']))
+% ------------------------------------------------------
 
 % ------------ Código en Prolog ------------------------
 % Extrae un número dado de elementos aleatorios de una lista.

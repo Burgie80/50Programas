@@ -3,7 +3,33 @@
 % Fecha: 20 de octubre de 2024
 % Descripción: Programa en Prolog que ordena una lista de
 % listas según la frecuencia de la longitud de las sublistas.
+% Se incluye un código comentado de Python.
 % ===============================================
+
+% ----------- Código en Python (Comentado) -------------
+% from itertools import groupby
+% 
+% def pack(lst):
+%     return [list(group) for key, group in groupby(lst)]
+% 
+% def transform(packed_lst):
+%     return [(len(sublist), sublist[0]) for sublist in packed_lst]
+% 
+% def encode(lst):
+%     packed_lst = pack(lst)
+%     return transform(packed_lst)
+% 
+% def length_frequency(lst):
+%     packed_lst = pack(lst)
+%     encoded_lst = encode(packed_lst)
+%     encoded_lst.sort(key=lambda x: x[0])
+%     return encoded_lst
+% 
+% if __name__ == '__main__':
+%     lst = [['a','b','c'],['d','e'],['f','g','h'],['d','e'],['i','j','k','l'],['m','n'],['o']]
+%     result = length_frequency(lst)
+%     print(result)
+% ------------------------------------------------------
 
 % ------------ Código en Prolog ------------------------
 % Agrupa duplicados consecutivos de una lista en sublistas.

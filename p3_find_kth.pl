@@ -29,6 +29,12 @@ element_at(X, [X|_], 1).
 % resta 1 al índice k y sigue evaluando la lista
 element_at(X, [_|T], K) :- K > 1, K1 is K - 1, element_at(X, T, K1).
 
+main :-
+        print("Ejecutando programa 3..."),nl,
+        print("Ejecutando: element_at(X, [a, b, c, d, e], 2)."),nl,
+        element_at(X, [a, b, c, d, e], 2),     
+        format("Resultado: ~s~n\n", [X]).
+
 % Ejemplo de uso:
 % ?- element_at(X, [a, b, c, d, e], 2).
 % X = b.

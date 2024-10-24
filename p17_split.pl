@@ -4,7 +4,16 @@
 % Descripción: Programa en Prolog que divide una lista en
 % dos partes. La longitud de la primera parte está dada
 % por el segundo argumento.
+% Se incluye un código comentado de Python.
 % ===============================================
+
+% ---------- Código en Python (Comentado) --------------
+% def split(lst, n):
+%     return lst[:n], lst[n:]
+% 
+% if __name__ == '__main__':
+%     print(split(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k'], 3))
+% ------------------------------------------------------
 
 % ------------ Código en Prolog ------------------------
 % Divide una lista en dos partes.

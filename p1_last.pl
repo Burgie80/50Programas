@@ -30,6 +30,12 @@ my_last(X, [X]).
 my_last(X, [_|Tail]) :-
 	my_last(X, Tail).
 
+main :-
+	print("Ejecutando programa 1..."),nl,
+	print("Ejecutando: my_last(X, [a, b, c, d])."),nl,
+	my_last(X, [a, b, c, d]),
+	format("Resultado: ~s~n\n", [X]).
+
 % Ejemplo de uso:
 % ?- my_last(X, [a, b, c, d]).
 % X = d.

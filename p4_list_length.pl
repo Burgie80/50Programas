@@ -26,6 +26,12 @@ list_length([], 0).
 % Caso recursivo: la longitud es 1 más que la longitud de la cola.
 list_length([_|T], N) :- list_length(T, N1), N is N1 + 1.
 
+main :-
+        print("Ejecutando programa 4..."),nl,
+        print("Ejecutando: list_length([a, b, c, d], N)."),nl,
+        list_length([a, b, c, d], N),     
+        format("Resultado: ~s~n\n", [N]).
+
 % Ejemplo de uso:
 % ?- list_length([a, b, c, d], N).
 % N = 4.

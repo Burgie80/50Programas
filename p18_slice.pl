@@ -4,7 +4,16 @@
 % Descripción: Programa en Prolog que extrae una porción
 % de una lista, dado un rango. Los índices I y K deben
 % ser mayores que 0.
+% Se incluye un código comentado de Python.
 % ===============================================
+
+% ---------- Código en Python (Comentado) --------------
+% def slice(lst, i, k):
+%     return lst[i-1:k]
+% 
+% if __name__ == '__main__':
+%     print(slice(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k'], 3, 7))
+% ------------------------------------------------------
 
 % ------------ Código en Prolog ------------------------
 % Extrae una porción de una lista, dado un rango.

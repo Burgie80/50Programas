@@ -3,7 +3,16 @@
 % Fecha: 20 de octubre de 2024
 % Descripción: Programa en Prolog que elimina el k-ésimo
 % elemento de una lista. El índice K debe ser mayor que 0.
+% Se incluye un código comentado de Python.
 % ===============================================
+
+% ---------- Código en Python (Comentado) --------------
+% def remove_at(lst, k):
+%     return lst[:k-1] + lst[k:], lst[k-1]
+% 
+% if __name__ == '__main__':
+%     print(remove_at(['a', 'b', 'c', 'd'], 2))
+% ------------------------------------------------------
 
 % ------------ Código en Prolog ------------------------
 % Elimina el k-ésimo elemento de una lista.

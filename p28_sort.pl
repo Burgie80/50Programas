@@ -3,7 +3,16 @@
 % Fecha: 20 de octubre de 2024
 % Descripción: Programa en Prolog que ordena una lista de
 % listas de acuerdo con la longitud de las sublistas.
+% Se incluye un código comentado de Python.
 % ===============================================
+
+% ----------- Código en Python (Comentado) -------------
+% def lsort(lst):
+%     return sorted(lst, key=len)
+% 
+% if __name__ == '__main__':
+%     print(lsort([['a', 'b', 'c'], ['d', 'e'], ['f', 'g', 'h'], ['d', 'e'], ['i', 'j', 'k', 'l'], ['m', 'n'], ['o']]))
+% ------------------------------------------------------
 
 % ------------ Código en Prolog ------------------------
 % Ordena una lista de listas de acuerdo con la longitud de las sublistas.
