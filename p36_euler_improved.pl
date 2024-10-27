@@ -4,7 +4,61 @@
 % Descripción: Programa en Prolog que calcula la función
 % totiente de Euler phi(m) de manera mejorada usando
 % factores primos.
+% Se incluye un código comentado de Python.
 % ===============================================
+
+% ----------- Código en Python (Comentado) -------------
+% from math import isqrt
+% 
+% def pack(lst):
+%     if not lst:
+%         return []
+%     grouped = []
+%     current_group = [lst[0]]
+%     for elem in lst[1:]:
+%         if elem == current_group[-1]:
+%             current_group.append(elem)
+%         else:
+%             grouped.append(current_group)
+%             current_group = [elem]
+%     grouped.append(current_group)
+%     return grouped
+% 
+% def encode(lst):
+%     packed_list = pack(lst)
+%     return [(len(group), group[0]) for group in packed_list]
+% 
+% def prime_factors(n):
+%     factors = []
+%     factor = 2
+%     while factor * factor <= n:
+%         while (n % factor) == 0:
+%             factors.append(factor)
+%             n //= factor
+%         factor = next_factor(factor)
+%     if n > 1:
+%         factors.append(n)
+%     return factors
+% 
+% def next_factor(f):
+%     if f == 2:
+%         return 3
+%     return f + 2
+% 
+% def prime_factors_mult(n):
+%     factors = prime_factors(n)
+%     return encode(factors)
+% 
+% def totient_improved(n):
+%     prime_mult = prime_factors_mult(n)
+%     result = 1
+%     for p, m in prime_mult:
+%         result *= (p - 1) * (p ** (m - 1))
+%     return result
+% 
+% if __name__ == '__main__':
+%     print(totient_improved(56))
+% ------------------------------------------------------
 
 % ------------ Código en Prolog ------------------------
 % Agrupa duplicados consecutivos de una lista en sublistas.
@@ -49,7 +103,13 @@ totient_improved(N, Phi) :- prime_factors_mult(N, F), totient_phi(F, Phi).
 totient_phi([], 1).
 totient_phi([[P, M]|T], Phi) :- totient_phi(T, Phi1), Phi is Phi1 * (P - 1) * P ** (M - 1).
 
+% Función main para ejecutar el programa con ejemplos de uso
+main :-
+    print("Ejecutando programa 36..."),nl,
+    print("Ejecutando: totient_improved(56, P)."),nl,
+    totient_improved(56, P),
+    format("Resultado: ~d~n", [P]).
+
 % Ejemplo de uso:
 % ?- totient_improved(56, Phi).
 % Phi = 24.
-

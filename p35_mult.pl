@@ -3,7 +3,32 @@
 % Fecha: 20 de octubre de 2024
 % Descripción: Programa en Prolog que determina los factores
 % primos de un número entero positivo con su multiplicidad.
+% Se incluye un código comentado de Python.
 % ===============================================
+
+% ----------- Código en Python (Comentado) -------------
+% import math
+% 
+% def prime_factors_mult(N):
+%     if N < 2:
+%         return []
+%     
+%     factors = []
+%     
+%     for i in range(2, int(math.sqrt(N)) + 1):
+%         count = 0
+%         while N % i == 0:
+%             N = N // i
+%             count += 1
+%         
+%         if count > 0:
+%             factors.append([count, i])
+%     
+%     return factors
+% 
+% if __name__ == '__main__':
+%     print(prime_factors_mult(315))
+% ------------------------------------------------------
 
 % ------------ Código en Prolog ------------------------
 % Agrupa duplicados consecutivos de una lista en sublistas.
@@ -40,6 +65,13 @@ next_factor(F, F1) :- F > 2, F1 is F + 2.
 
 % Determina los factores primos con su multiplicidad.
 prime_factors_mult(N, L) :- prime_factors(N, F), encode(F, L).
+
+% Función main para ejecutar el programa con ejemplos de uso
+main :-
+    print("Ejecutando programa 35..."),nl,
+    print("Ejecutando: prime_factors_mult(315, L)."),nl,
+    prime_factors_mult(315, L),
+    format("Resultado: ~w~n", [L]).
 
 % Ejemplo de uso:
 % ?- prime_factors_mult(315, L).

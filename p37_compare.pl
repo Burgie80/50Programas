@@ -3,7 +3,80 @@
 % Fecha: 20 de octubre de 2024
 % Descripción: Programa en Prolog que compara dos métodos
 % para calcular la función totiente de Euler.
+% Se incluye un código comentado de Python.
 % ===============================================
+
+% ----------- Código en Python (Comentado) -------------
+% from math import isqrt
+% 
+% def gcd(x, y):
+%     while y != 0:
+%         x, y = y, x % y
+%     return x
+% 
+% def coprime(x, y):
+%     return gcd(x, y) == 1
+% 
+% def totient(m):
+%     if m == 1:
+%         return 1
+%     return sum(1 for k in range(1, m) if coprime(m, k))
+% 
+% def pack(lst):
+%     if not lst:
+%         return []
+%     grouped = []
+%     current_group = [lst[0]]
+%     for elem in lst[1:]:
+%         if elem == current_group[-1]:
+%             current_group.append(elem)
+%         else:
+%             grouped.append(current_group)
+%             current_group = [elem]
+%     grouped.append(current_group)
+%     return grouped
+% 
+% def encode(lst):
+%     packed_list = pack(lst)
+%     return [(len(group), group[0]) for group in packed_list]
+% 
+% def prime_factors(n):
+%     factors = []
+%     factor = 2
+%     while factor * factor <= n:
+%         while (n % factor) == 0:
+%             factors.append(factor)
+%             n //= factor
+%         factor = next_factor(factor)
+%     if n > 1:
+%         factors.append(n)
+%     return factors
+% 
+% def next_factor(f):
+%     if f == 2:
+%         return 3
+%     return f + 2
+% 
+% def prime_factors_mult(n):
+%     factors = prime_factors(n)
+%     return encode(factors)
+% 
+% def totient_improved(n):
+%     prime_mult = prime_factors_mult(n)
+%     result = 1
+%     for p, m in prime_mult:
+%         result *= (p - 1) * (p ** (m - 1))
+%     return result
+% 
+% def compare_totient(n):
+%     phi_basic = totient(n)
+%     phi_improved = totient_improved(n)
+%     print(f"Phi (método básico): {phi_basic}")
+%     print(f"Phi (método mejorado): {phi_improved}")
+% 
+% if __name__ == '__main__':
+%     compare_totient(1000)
+% ------------------------------------------------------
 
 % ------------ Código en Prolog ------------------------
 % Calcula el máximo común divisor usando el algoritmo de Euclides.
@@ -79,6 +152,13 @@ compare_totient(N) :-
     totient_improved(N, Phi2), 
     write('Phi (método básico): '), write(Phi1), nl, 
     write('Phi (método mejorado): '), write(Phi2), nl.
+
+% Función main para ejecutar el programa con ejemplos de uso
+main :-
+    print("Ejecutando programa 37..."),nl,
+    print("Ejecutando: compare_totient(1000)."),nl,
+    (compare_totient(1000) -> Resultado = "true"; Resultado = "false"),
+    format("Resultado: ~s~n", [Resultado]).
 
 % Ejemplo de uso:
 % ?- compare_totient(1000).
